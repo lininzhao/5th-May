@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //请描述什么是原型链并且编写一个原型链的例子。
+        
+        function Person(name,age,gender){
+    this.name=name;
+    this.age=age;
+    this.gender=gender;
+} 
+
+function Student(name,age,gender,grade,school){
+    Person.call(this,name,age,gender);
+    this.grade=grade;
+    this.school=school;
+}
+var stu=new Student('Libai',10,'male','grade4','Tingshua Primary school');
+console.log(stu);
+    </script>
+</body>
+</html>

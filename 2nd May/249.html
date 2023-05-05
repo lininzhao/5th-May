@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //题目：请编写一个闭包的例子，并且证明访问的变量是从闭包中获取的。
+        function fn1(){
+            var str='hello world';
+            function fn2(){
+                console.log(str);
+            }
+            return fn2;
+        }
+        var res=fn1();
+        res();
+    </script>
+</body>
+</html>
